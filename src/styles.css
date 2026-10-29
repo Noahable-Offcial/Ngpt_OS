@@ -4,3 +4,6 @@
 
 /* Developer terminal */
 .terminal{display:flex;flex-direction:column;gap:10px;overflow:auto}.terminal-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#c9f7c4}.terminal-toolbar strong{margin-right:auto}.terminal-toolbar span{font-size:11px;color:#a9b6ad}.terminal-toolbar button{padding:6px 9px;font:12px/1.3 inherit}.terminal #terminal-output{flex:1;min-height:190px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}.terminal-form{align-items:center;border-top:1px solid #ffffff20;padding-top:10px}.terminal-form input{min-width:50px}.terminal-form button{padding:7px 12px}.terminal-footnote{font-size:11px;color:#9da8a0;margin:0}.terminal-toolbar .soft-button{color:#e6f1e4}
+
+/* NGPT Live taskbar shortcut */
+.ngpt-live-button{display:grid;place-items:center;width:38px;height:38px;border:0;background:transparent;border-radius:10px;cursor:pointer;flex-shrink:0}.ngpt-live-button:hover{background:var(--surface-2)}.ngpt-live-dot{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:linear-gradient(145deg,#65b7ff,#2674ff);box-shadow:0 0 0 3px #3e8bff24,0 2px 9px #2478ff55;color:white;font-size:15px;transition:transform .18s}.ngpt-live-button:hover .ngpt-live-dot{transform:scale(1.08)}.ngpt-live-button:focus-visible{outline:2px solid #7cb9ff;outline-offset:2px}
