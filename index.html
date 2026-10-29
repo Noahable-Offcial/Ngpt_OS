@@ -1,2 +1,43 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10131b"><title>NGPT OS</title><link rel="stylesheet" href="./src/styles.css"></head><body><main id="desktop"><div class="desktop-icons"><button data-open="browser">🌐<small>Browser</small></button><button data-open="files">📁<small>Files</small></button><button data-open="store">🛍️<small>App Store</small></button><button data-open="settings">⚙️<small>Settings</small></button></div><div id="windows"></div><section id="start-menu" class="panel hidden"><h2>NGPT OS</h2><input id="app-search" placeholder="Search apps"><div id="app-list" class="app-list"></div></section><footer class="taskbar"><button id="start-button" aria-label="Start">⊞</button><div id="task-apps"></div><button id="clock" title="Open Clock">--:--</button></footer></main><section id="welcome" class="welcome"><div class="welcome-card"><div class="logo">N</div><h1>Welcome to NGPT OS</h1><p>Your desktop-style workspace, running in the browser.</p><button id="enter" class="primary">Enter desktop →</button><small>Preview edition · Not a replacement for a native operating system</small></div></section><script src="./src/app.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#20232b">
+<meta name="description" content="NGPT OS — a customizable desktop workspace in your browser.">
+<title>NGPT OS</title>
+<link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<div id="boot-screen" class="boot-screen"><div class="boot-logo">N</div><div class="boot-name">NGPT OS</div><div class="boot-loader"><span></span></div></div>
+<main id="desktop" class="desktop">
+  <div id="desktop-wallpaper" class="wallpaper"></div>
+  <div id="desktop-icons" class="desktop-icons">
+    <button class="desktop-icon" data-open="files"><span class="desk-icon">📁</span><span>This PC</span></button>
+    <button class="desktop-icon" data-open="browser"><span class="desk-icon">🌐</span><span>Browser</span></button>
+    <button class="desktop-icon" data-open="locker"><span class="desk-icon">🔐</span><span>File Locker</span></button>
+    <button class="desktop-icon" data-open="store"><span class="desk-icon">🛍️</span><span>App Store</span></button>
+  </div>
+  <div id="windows" class="windows"></div>
+  <section id="start-menu" class="start-menu hidden" aria-label="Start menu">
+    <label class="start-search"><span>⌕</span><input id="app-search" placeholder="Search for apps, settings, and files" autocomplete="off"></label>
+    <div class="start-heading"><strong>Pinned</strong><button id="show-all-apps">All apps　›</button></div>
+    <div id="app-list" class="app-grid"></div>
+    <div class="start-heading recommended-heading"><strong>Recommended</strong><span class="muted">Recent</span></div>
+    <div class="recommended" id="recommended-list"><span class="muted">Your recent apps will appear here.</span></div>
+    <div class="start-footer"><span class="user-avatar">N</span><strong>Local user</strong><button id="power-button" title="Power options">⏻</button></div>
+  </section>
+  <section id="quick-panel" class="quick-panel hidden"><div class="quick-grid"><button data-quick="wifi">◉<small>Network</small></button><button data-quick="theme">☾<small>Theme</small></button><button data-quick="settings">⚙<small>Settings</small></button><button data-quick="lock">🔒<small>Lock</small></button></div><div class="quick-bottom"><span id="quick-date"></span><button id="quick-open-clock">Open clock</button></div></section>
+  <div id="context-menu" class="context-menu hidden"><button data-context="refresh">↻　Refresh desktop</button><button data-context="settings">⚙　Personalise</button><button data-context="new-note">📝　New note</button></div>
+  <div id="toast-area" class="toast-area"></div>
+  <footer class="taskbar" id="taskbar">
+    <div class="taskbar-left"><button id="widgets-button" class="taskbar-button" title="Widgets">☁</button></div>
+    <div class="taskbar-center"><button id="start-button" class="taskbar-button start-button" title="Start menu"><span class="windows-mark">⊞</span></button><button id="search-button" class="taskbar-button search-button" title="Search">⌕ <span>Search</span></button><div id="task-apps" class="task-apps"></div></div>
+    <div class="taskbar-right"><button id="tray-button" class="tray-button" title="Quick settings"><span>⌃</span><span>◉</span><span>🔊</span><span>▰</span></button><button id="clock" class="clock-button"><span id="task-time">--:--</span><small id="task-date">--/--/----</small></button></div>
+  </footer>
+</main>
+<section id="welcome" class="welcome hidden"><div class="welcome-card"><div class="welcome-logo">N</div><h1>Welcome to NGPT OS</h1><p>A customizable desktop that feels familiar.</p><button id="enter" class="primary">Start using NGPT OS　→</button><small>Your browser keeps local files and settings on this device.</small></div></section>
+<input id="fallback-file-input" type="file" multiple hidden>
+<script src="./src/app.js"></script>
+</body>
+</html>
