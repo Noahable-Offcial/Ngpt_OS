@@ -7,6 +7,7 @@
 <meta name="description" content="NGPT OS — a customizable desktop workspace in your browser.">
 <title>NGPT OS</title>
 <link rel="stylesheet" href="./src/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script>
 </head>
 <body>
 <div id="boot-screen" class="boot-screen"><div class="boot-logo">N</div><div class="boot-name">NGPT OS</div><div class="boot-loader"><span></span></div></div>
@@ -39,6 +40,7 @@
 </main>
 <section id="welcome" class="welcome hidden"><div class="welcome-card"><div class="welcome-logo">N</div><h1>Welcome to NGPT OS</h1><p>A customizable desktop that feels familiar.</p><button id="enter" class="primary">Start using NGPT OS　→</button><small>Your browser keeps local files and settings on this device.</small></div></section>
 <input id="fallback-file-input" type="file" multiple hidden>
+<section id="auth-screen" class="auth-screen" aria-label="NGPT OS account"><div class="auth-card"><div class="auth-logo">N</div><p class="auth-eyebrow">YOUR PERSONAL WORKSPACE</p><h1 id="auth-heading">Welcome to NGPT OS</h1><p class="auth-description">Sign in to sync your settings, notes and files securely across devices.</p><div class="auth-tabs"><button type="button" id="auth-tab-login" class="active">Sign in</button><button type="button" id="auth-tab-signup">Create account</button></div><form id="auth-form"><label>Email address<input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label>Password<input id="auth-password" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></label><button class="auth-submit" id="auth-submit" type="submit">Sign in securely</button></form><button type="button" id="auth-reset" class="auth-reset">Forgot password?</button><p id="auth-message" class="auth-message" role="status" aria-live="polite"></p><small>Protected by Supabase Auth. Your private files are accessible only to your account.</small></div></section>
 <script src="./src/app.js"></script>
 </body>
 </html>
