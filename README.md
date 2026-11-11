@@ -1,6 +1,6 @@
-# NGPT OS
+# DANE OS
 
-NGPT OS is a Windows-inspired desktop workspace that runs in a web browser. This is an early preview, not a native operating system.
+DANE OS is a Windows-inspired desktop workspace that runs in a web browser. This is an early preview, not a native operating system.
 
 ## Deploy to Vercel
 1. Import this repository into Vercel.
